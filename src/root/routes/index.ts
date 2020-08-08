@@ -4,7 +4,7 @@ import * as path from 'path';
 export const router = express.Router();
 
 router.get('/', (req: Request, res: Response) => {
-    res.render('JJACK/index');
+    res.render('root/index');
 });
 
 router.use(express.static(path.join(__dirname, '/')));
