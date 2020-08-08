@@ -49,6 +49,6 @@ class ExpressServer {
 const WebServer = new ExpressServer();
 const WebApp: express.Application = WebServer.getInstance();
 
-WebApp.listen(8000, () => {
+WebApp.listen(process.env.PORT || 8000, () => {
     console.log('WebServer - Express on!');
 })
