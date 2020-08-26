@@ -8,13 +8,13 @@ import root from './root/app';
 
 class ExpressServer {
     private app: express.Application
-    private rootRouter: express.Router
-    private jRouter: express.Router
+    private root: root
+    private JJACK: JJACK
 
     constructor () {
         this.app = express();
-        this.rootRouter = new root().router;
-        this.jRouter = new JJACK().router;
+        this.root = new root();
+        this.JJACK = new JJACK();
 
         this.app.set('views', path.join(__dirname, '_views'));
         this.app.set('view engine', 'ejs');
@@ -27,8 +27,8 @@ class ExpressServer {
     }
 
     private route() {
-        this.app.use('/', this.rootRouter);
-        this.app.use('/JJACK', this.jRouter);
+        this.app.use('/', this.root.router);
+        this.app.use('/JJACK', this.JJACK.router);
 
         this.app.use(function(req: any, res: any, next: NextFunction) { // TODO :: 정확한 타입 지정 필요
             next(createError(404));
@@ -49,6 +49,6 @@ class ExpressServer {
 const WebServer = new ExpressServer();
 const WebApp: express.Application = WebServer.getInstance();
 
-WebApp.listen(process.env.PORT || 8000, () => {
+WebApp.listen(process.env.PORT || 80, () => {
     console.log('WebServer - Express on!');
 })

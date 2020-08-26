@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JJACK Project 2 - Snake</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/p2b2/project2b2lank.css">
+    <script src="../js/jquery.js"></script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <h1>JJACK - 스네이크 랭킹</h1>
+    <br />
+    <div id="lank-container">
+        <table class="lank-table">
+            <thead>
+            <tr>
+                <th class="number tb-value">순위</th>
+                <th class="name tb-value">이름</th>
+                <th class="score tb-value">점수</th>
+                <th class="time tb-value">달성일시</th>
+            </tr>
+            </thead>
+            <tbody id="lank">
+            <tr>
+                <th class="number">1</th>
+                <td class="name" id="Lname-1">N/A</td>
+                <td class="score" id="Lscore-1">N/A</td>
+                <td class="time" id="Ltime-1">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">2</th>
+                <td class="name" id="Lname-2">N/A</td>
+                <td class="score" id="Lscore-2">N/A</td>
+                <td class="time" id="Ltime-2">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">3</th>
+                <td class="name" id="Lname-3">N/A</td>
+                <td class="score" id="Lscore-3">N/A</td>
+                <td class="time" id="Ltime-3">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">4</th>
+                <td class="name" id="Lname-4">N/A</td>
+                <td class="score" id="Lscore-4">N/A</td>
+                <td class="time" id="Ltime-4">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">5</th>
+                <td class="name" id="Lname-5">N/A</td>
+                <td class="score" id="Lscore-5">N/A</td>
+                <td class="time" id="Ltime-5">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">6</th>
+                <td class="name" id="Lname-6">N/A</td>
+                <td class="score" id="Lscore-6">N/A</td>
+                <td class="time" id="Ltime-6">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">7</th>
+                <td class="name" id="Lname-7">N/A</td>
+                <td class="score" id="Lscore-7">N/A</td>
+                <td class="time" id="Ltime-7">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">8</th>
+                <td class="name" id="Lname-8">N/A</td>
+                <td class="score" id="Lscore-8">N/A</td>
+                <td class="time" id="Ltime-8">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">9</th>
+                <td class="name" id="Lname-9">N/A</td>
+                <td class="score" id="Lscore-9">N/A</td>
+                <td class="time" id="Ltime-9">N/A</td>
+            </tr>
+            <tr>
+                <th class="number">10</th>
+                <td class="name" id="Lname-10">N/A</td>
+                <td class="score" id="Lscore-10">N/A</td>
+                <td class="time" id="Ltime-10">N/A</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div class="button" onclick="resetLank()">랭킹 초기화</div>
+    <div class="button" onclick="gameStart()">게임시작</div>
+    <div class="button" onclick="goHome()">홈으로</div>
+    <div id="fadeout-circle-1"></div>
+    <div id="fadeout-circle-2"></div>
+    <div id="fadeout-circle-3"></div>
+    <div id="fadein-circle-1"></div>
+    <div id="fadein-circle-2"></div>
+    <div id="fadein-circle-3"></div>
+    <script src="../js/p2b2/project2b2lank.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <title>JJACK Project 1 - Calender</title>
+    <link rel="stylesheet" href="css/project1.css" type="text/css" />
+</head>
+<body>
+<div id="container">
+    <div id="month">
+        <div id="year_text">
+            2020
+        </div>
+        <div id="month_text">
+            7
+        </div>
+    </div>
+    <div id="calender">
+        <div id="calender_container">
+            <table class="tg">
+                <thead>
+                <tr>
+                    <th class="tb-value">SUN</th>
+                    <th class="tb-value">MON</th>
+                    <th class="tb-value">TUE</th>
+                    <th class="tb-value">WED</th>
+                    <th class="tb-value">THU</th>
+                    <th class="tb-value">FRI</th>
+                    <th class="tb-value">SAT</th>
+                </tr>
+                </thead>
+                <tbody id="days"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="controlbar">
+        <div id="previous_arrow" onclick="previousMonth()">◀︎</div>
+        <div id="date_text"></div>
+        <div id="next_arrow" onclick="nextMonth()">►</div>
+    </div>
+</div>
+
+<script src="js/project1.js"></script>
+</body>
+</html>

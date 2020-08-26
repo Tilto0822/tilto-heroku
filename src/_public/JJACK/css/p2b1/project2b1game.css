@@ -1,0 +1,218 @@
+head, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: RGB(11, 20, 50);
+}
+
+#container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover-pos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: RGBA(11, 20, 50, 0.8);
+    z-index: 1;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: RGB(236, 236, 236);
+}
+
+#cover-pos #head-text {
+    display: inline-flex;
+    font-size: 50px;
+}
+
+#cover-pos #body-text {
+    display: inline-flex;
+    font-size: 25px;
+}
+
+.header {
+    margin-top: 12px;
+    width: 534px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: RGB(236, 236, 236);
+}
+
+#score-container {
+    width: 80px;
+    height: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#score-text {
+    width: 80px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#score-counter {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+#time-container {
+    width: 80px;
+    height: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#time-text {
+    width: 80px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#time-counter {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+#high-container {
+    width: 80px;
+    height: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#high-text {
+    width: 80px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#high-counter {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.game-card {
+    border-radius: 30px 30px 30px 30px / 30px 30px 30px 30px;
+    width: 534px;
+    height: 534px;
+    background-color: RGB(0, 3, 11);
+    border-color: RGB(38, 65, 163);
+    border-width: 3px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell-container {
+    width: 504px;
+    height: 504px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.cell-row-container {
+    width: 504px;
+    height: 24px;
+    display: flex;
+}
+
+.cell {
+    border-spacing: 0px;
+    border-color: RGB(52, 118, 120);
+    border-style: solid;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    border-width: 2px;
+    width: 20px;
+    height: 18px;
+    margin: 4px 2px;
+    display: inline-flex;
+}
+
+.cell-item {
+    background-color: #d04040;
+}
+
+.cell-snake-body {
+    background-color: #5cb310;
+}
+
+.cell-snake-head {
+    background-color: #5fde1b;
+}
+
+#fade-circle-1 {
+    margin-top: 80px;
+    position: absolute;
+    z-index: 50;
+    width: 10000px;
+    height: 10000px;
+    border-radius: 25000px;
+    background-color: RGBA(0, 0, 0, 0.3);
+}
+
+#fade-circle-2 {
+    margin-top: 80px;
+    position: absolute;
+    z-index: 49;
+    width: 10000px;
+    height: 10000px;
+    border-radius: 25000px;
+    background-color: RGBA(0, 0, 0, 0.6);
+}
+
+#fade-circle-3 {
+    margin-top: 80px;
+    position: absolute;
+    z-index: 48;
+    width: 10000px;
+    height: 10000px;
+    border-radius: 25000px;
+    background-color: RGBA(0, 0, 0, 1);
+}

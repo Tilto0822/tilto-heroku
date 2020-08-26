@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JJACK Project 2 - Snake</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/p2b2/project2b2game.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <script src="../js/jquery.js"></script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div id="toast-cover"></div>
+    <div id="lankcheck-modal-cover">
+        <div class="lankcheck-modal">
+            <div class="lankcheck-modal-header">
+                <div class="lankcheck-modal-header-bar"></div>
+                신기록 달성!
+            </div>
+            <div class="lankcheck-modal-body">
+                <div class="lankcheck-modal-body-text">
+                    신기록! 랭킹 <span class="dialog-lanking">1</span>위에 등록됩니다!<br />
+                    등록할 이름을 적어주세요.
+                </div>
+                <div class="lankcheck-modal-input-div">
+                    <input class="lankcheck-modal-input">
+                    <div class="lankcheck-modal-input-count red">
+                        <span class="input-counter">0</span>/15자 (최소 1자)
+                    </div>
+                </div>
+                <footer class="dialog-footer">
+                    <button class="positive checkbutton dialog-check-button" onclick="lankSet()" disabled>
+                        <i class="icon fa-fw fas fa-check"></i>
+                        확인
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div id="lankcheck-modal-cover-pos"></div>
+    <div id="game-wrapper">
+        <div id="cover-pos-text">
+            <div id="head-text">CLICK TO PLAY</div>
+            <div id="body-text">
+                <div class="button" onclick="goHome()">홈으로</div>
+                <div class="button" onclick="goLank()">랭킹보기</div>
+            </div>
+        </div>
+        <div id="cover-pos"></div>
+        <div id="container">
+            <div class="header">
+                <div id="score-container">
+                    <div id="score-text">Score</div>
+                    <div id="score-counter">3</div>
+                </div>
+                <div id="time-container">
+                    <div id="time-text">Time</div>
+                    <div id="time-counter">0</div>
+                </div>
+                <div id="high-container">
+                    <div id="high-text">High</div>
+                    <div id="high-counter">0</div>
+                </div>
+            </div>
+            <div class="game-card">
+                <div id="cell-container"></div>
+            </div>
+        </div>
+        <div id="fadeout-circle-1"></div>
+        <div id="fadeout-circle-2"></div>
+        <div id="fadeout-circle-3"></div>
+        <div id="fadein-circle-1"></div>
+        <div id="fadein-circle-2"></div>
+        <div id="fadein-circle-3"></div>
+    </div>
+    <script src="../js/p2b2/project2b2game.js"></script>
+</body>
+</html>

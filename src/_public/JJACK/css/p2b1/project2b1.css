@@ -1,0 +1,61 @@
+head, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: RGB(11, 20, 50);
+    color: RGB(255, 255, 255);
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#start-button {
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: RGB(23, 39, 97);
+    background-color: RGB(32, 57, 142);
+    color: RGB(236, 236, 236);
+    font-size: 15px;
+    padding: 8px 30px;
+}
+
+#fade-circle-1 {
+    margin-top: 300px;
+    position: absolute;
+    z-index: 3;
+    width: 0px;
+    height: 0px;
+    border-radius: 25000px;
+    background-color: RGBA(0, 0, 0, 0.3);
+}
+
+#fade-circle-2 {
+    margin-top: 300px;
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-radius: 25000px;
+    background-color: RGBA(0, 0, 0, 0.6);
+}
+
+#fade-circle-3 {
+    margin-top: 300px;
+    position: absolute;
+    z-index: 1;
+    width: 0px;
+    height: 0px;
+    border-radius: 25000px;
+    background-color: RGBA(0, 0, 0, 1);
+}
