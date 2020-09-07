@@ -134,7 +134,7 @@ function rollCard() {
             if (count === 8) {
                 x = 0;
                 y -= 140;
-                count = 0;
+                count = 1;
             }
             showCard(card, $('#GContainer'), x, y);
             x += 40;
@@ -147,7 +147,7 @@ function rollCard() {
             if (count === 8) {
                 x = 0;
                 y -= 140;
-                count = 0;
+                count = 1;
             }
             showCard(card, $('#YContainer'), x, y);
             x += 40;
@@ -160,7 +160,7 @@ function rollCard() {
             if (count === 8) {
                 x = 0;
                 y -= 140;
-                count = 0;
+                count = 1;
             }
             showCard(card, $('#TContainer'), x, y);
             x += 40;
@@ -173,7 +173,7 @@ function rollCard() {
             if (count === 8) {
                 x = 0;
                 y -= 140;
-                count = 0;
+                count = 1;
             }
             showCard(card, $('#PContainer'), x, y);
             x += 40;
