@@ -4,9 +4,9 @@ let trcount = 1;
 let inString = '';
 
 function addCell(text) {
-    if (trcount == 1) inString += '<tr>';
+    if (trcount === 1) inString += '<tr>';
     inString += `<td class="tb-value">${text}</td>`;
-    if (trcount == 7) {
+    if (trcount === 7) {
         inString += '</tr>';
         trcount = 1;
     } else trcount++;
@@ -22,12 +22,12 @@ function makeCalender() {
     let lastDay = new Date(year, month + 1, 0).getDate();
     for (let i = 0; i < firstDay; i++) addCell('');
     for (let i = 1; i <= lastDay; i++) addCell(i.toString());
-    if (((firstDay + lastDay) % 7) != 0) for (let i = 0; i < 7 - ((firstDay + lastDay) % 7); i++) addCell('');
+    if (((firstDay + lastDay) % 7) !== 0) for (let i = 0; i < 7 - ((firstDay + lastDay) % 7); i++) addCell('');
     document.getElementById('days').innerHTML = inString;
 }
 
 function previousMonth() {
-    if (month == 0) {
+    if (month === 0) {
         year--;
         month = 11;
     } else month--;
@@ -35,7 +35,7 @@ function previousMonth() {
 }
 
 function nextMonth() {
-    if (month == 11) {
+    if (month === 11) {
         year++;
         month = 0;
     } else month++;

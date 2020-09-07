@@ -1,0 +1,107 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #3c9b3c;
+    color: #eee;
+    cursor: default;
+}
+
+.card-wrap {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 68px;
+    height: 105px;
+}
+
+.card {
+    position: absolute;
+    z-index: 1;
+    width: 68px;
+    height: 105px;
+}
+
+.card-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 20px 10px;
+    width: 800px;
+    height: 300px;
+}
+
+#GContainer { height: 130px; bottom: 750px; }
+#YContainer { height: 130px; bottom: 550px; }
+#TContainer { height: 130px; bottom: 350px; }
+
+.card-shower {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 102px;
+    height: 157px;
+}
+
+.card-shower .card-title {
+    z-index: 1;
+    position: absolute;
+    bottom: 163px;
+    right: 0;
+    width: 102px;
+    height: 20px;
+    text-align: center;
+    font-size: 12pt;
+    color: #eee;
+}
+
+.card-shower .in-card{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 102px;
+    height: 157px;
+    z-index: 1;
+    background-size: cover;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 102px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: RGB(30, 30, 30);
+}
+
+#sidebar .title {
+    margin-top: 20px;
+    font-size: 20pt;
+}
+
+#sidebar #reroll {
+    margin-top: 10px;
+    font-size: 11pt;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #eee;
+    color: #111;
+    cursor: pointer;
+}
+
+#sidebar #reroll:hover {
+    background-color: #ccc;
+}
