@@ -36,9 +36,10 @@ body {
     height: 300px;
 }
 
-#GContainer { height: 130px; bottom: 750px; }
-#YContainer { height: 130px; bottom: 550px; }
-#TContainer { height: 130px; bottom: 350px; }
+#GContainer { bottom: 620px; }
+#YContainer { bottom: 620px; left: 700px; }
+#TContainer { bottom: 290px; left: 700px; }
+#PContainer { bottom: 290px; }
 
 .card-shower {
     display: none;

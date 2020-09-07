@@ -128,25 +128,49 @@ function rollCard() {
         res.set('T', sortCard(res.get('T')));
         res.set('P', sortCard(res.get('P')));
         let x = 0;
-        for (let card of res.get('G')) {
-            showCard(card, $('#GContainer'), x, 0);
-            x += 40;
-        }
-        x = 0;
-        for (let card of res.get('Y')) {
-            showCard(card, $('#YContainer'), x, 0);
-            x += 40;
-        }
-        x = 0;
-        for (let card of res.get('T')) {
-            showCard(card, $('#TContainer'), x, 0);
-            x += 40;
-        }
-        x = 0;
         let count = 1;
         let y = 170;
+        for (let card of res.get('G')) {
+            if (count === 8) {
+                x = 0;
+                y -= 140;
+                count = 0;
+            }
+            showCard(card, $('#GContainer'), x, y);
+            x += 40;
+            count++;
+        }
+        x = 0;
+        count = 1;
+        y = 170;
+        for (let card of res.get('Y')) {
+            if (count === 8) {
+                x = 0;
+                y -= 140;
+                count = 0;
+            }
+            showCard(card, $('#YContainer'), x, y);
+            x += 40;
+            count++;
+        }
+        x = 0;
+        count = 1;
+        y = 170;
+        for (let card of res.get('T')) {
+            if (count === 8) {
+                x = 0;
+                y -= 140;
+                count = 0;
+            }
+            showCard(card, $('#TContainer'), x, y);
+            x += 40;
+            count++;
+        }
+        x = 0;
+        count = 1;
+        y = 170;
         for (let card of res.get('P')) {
-            if (count === 13) {
+            if (count === 8) {
                 x = 0;
                 y -= 140;
                 count = 0;
