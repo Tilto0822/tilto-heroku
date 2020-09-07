@@ -78,10 +78,8 @@ router.get('/', (req: Request, res: Response) => {
 });
 
 router.post('/organize-cards', (req: Request, res: Response) => {
-    console.log(req.body.count);
     let hwatu: Array<string> = [];
     hwatu = req.body['array[]'];
-    console.log(hwatu);
     let result: Map<string, Array<string>> = new Map<string, Array<string>>();
     result.set('G', []);
     result.set('Y', []);
@@ -98,7 +96,6 @@ router.post('/organize-cards', (req: Request, res: Response) => {
         temp.push(hwatu[i]);
         result.set(type, temp);
     }
-    console.log(result);
     res.send({
         count: req.body.count,
         sort: JSON.stringify(Array.from(result.entries()))

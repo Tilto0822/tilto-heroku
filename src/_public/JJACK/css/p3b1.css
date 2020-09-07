@@ -9,6 +9,7 @@ body {
     background-color: #3c9b3c;
     color: #eee;
     cursor: default;
+    display: flex;
 }
 
 .card-wrap {
@@ -27,19 +28,25 @@ body {
     height: 105px;
 }
 
+.row-wrap {
+    width: 520px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .card-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0 0 20px 10px;
-    width: 800px;
+    position: relative;
+    margin: 10px 10px;
+    width: 500px;
     height: 300px;
 }
 
-#GContainer { bottom: 620px; }
-#YContainer { bottom: 620px; left: 700px; }
-#TContainer { bottom: 290px; left: 700px; }
-#PContainer { bottom: 290px; }
+#GContainer {}
+#YContainer {}
+#TContainer {}
+#PContainer {}
 
 .card-shower {
     display: none;
