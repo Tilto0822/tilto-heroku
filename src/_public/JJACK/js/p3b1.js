@@ -133,7 +133,7 @@ function rollCard() {
         for (let card of res.get('G')) {
             if (count === 8) {
                 x = 0;
-                y -= 140;
+                y -= 90;
                 count = 1;
             }
             showCard(card, $('#GContainer'), x, y);
@@ -146,7 +146,7 @@ function rollCard() {
         for (let card of res.get('Y')) {
             if (count === 8) {
                 x = 0;
-                y -= 140;
+                y -= 90;
                 count = 1;
             }
             showCard(card, $('#YContainer'), x, y);
@@ -159,7 +159,7 @@ function rollCard() {
         for (let card of res.get('T')) {
             if (count === 8) {
                 x = 0;
-                y -= 140;
+                y -= 90;
                 count = 1;
             }
             showCard(card, $('#TContainer'), x, y);
@@ -172,7 +172,7 @@ function rollCard() {
         for (let card of res.get('P')) {
             if (count === 8) {
                 x = 0;
-                y -= 140;
+                y -= 90;
                 count = 1;
             }
             showCard(card, $('#PContainer'), x, y);
