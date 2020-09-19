@@ -65,7 +65,6 @@ function showCard(card, $container, x, y) {
     }
     $card.hover(function () {
         $card.stop(false, true);
-        
         if (!isRev) $card.animate({
             height: (parseInt($card.css('height').split('px')[0])+30).toString() + 'px'
         }, 200);
@@ -117,12 +116,90 @@ function sortCard(cardlist) {
     return res;
 }
 
+function checkScore(cardlist) {
+    let score = 0;
+
+    let G = cardlist.get('G');
+    let Y = cardlist.get('Y');
+    let T = cardlist.get('T');
+    let P = cardlist.get('P');
+
+    switch (G.length) {
+        case 3:
+            if (G.indexOf('12_G') !== -1) {
+                score += 2;
+                console.log('비삼광... - 점수 +2\n현재 점수 : '+score);
+            } else {
+                score += 3;
+                console.log('삼광! - 점수 +3\n현재 점수 : '+score);
+            }
+            break;
+        case 4:
+            score += 4;
+            console.log('사광! - 점수 +4\n현재 점수 : '+score);
+            break;
+        case 5:
+            score += 15;
+            console.log('오광! - 점수 +15\n현재 점수 : '+score);
+            break;
+        default:
+            console.log('광 체크 건너뜀.\n현재 점수 : '+score);
+            break;
+    }
+
+    if (Y.length > 4) {
+        score += Y.length - 4;
+        console.log(`열끗 점수 : +${(Y.length-4)}\n현재 점수 : ${score}`);
+    }
+    else console.log('열끗 체크 건너뜀.\n현재 점수 : '+score);
+
+    if (T.length > 4) {
+        score += T.length - 4;
+        console.log(`띠 점수 : +${(T.length-4)}\n현재 점수 : ${score}`);
+    }
+    else console.log('띠 체크 건너뜀.\n현재 점수 : '+score);
+
+    if (P.length > 9) {
+        let temp = 0;
+        temp += P.length - 9;
+        if (P.indexOf('11_PP') !== -1) temp += 1;
+        if (P.indexOf('12_PP') !== -1) temp += 1;
+        if (P.indexOf('X_PP1') !== -1) temp += 1;
+        if (P.indexOf('X_PP2') !== -1) temp += 1;
+        if (P.indexOf('X_PPP') !== -1) temp += 2;
+        score += temp;
+        console.log(`피 점수 : +${temp}\n현재 점수 : ${score}`);
+        
+    }
+    else console.log('피 체크 건너뜀.\n현재 점수 : '+score);
+
+    if (Y.indexOf('2_Y') !== -1 && Y.indexOf('4_Y') !== -1 && Y.indexOf('8_Y') !== -1) {
+        score += 5;
+        console.log('고도리! - 점수 +5\n현재 점수 : '+score);
+    }
+    if (T.indexOf('1_T') !== -1 && T.indexOf('2_T') !== -1 && T.indexOf('3_T') !== -1) {
+        score += 3;
+        console.log('홍단! - 점수 +3\n현재 점수 : '+score);
+    }
+    if (T.indexOf('4_T') !== -1 && T.indexOf('5_T') !== -1 && T.indexOf('7_T') !== -1) {
+        score += 3;
+        console.log('초단! - 점수 +3\n현재 점수 : '+score);
+    }
+    if (T.indexOf('6_T') !== -1 && T.indexOf('9_T') !== -1 && T.indexOf('10_T') !== -1) {
+        score += 3;
+        console.log('청단! - 점수 +3\n현재 점수 : '+score);
+    }
+
+    return score;
+}
+
 function rollCard() {
     reset();
     $.post(`./${project}/organize-cards`, makeRandomHwatuArray(0, 51))
     .done(function (data) {
         let res = new Map(JSON.parse(data.sort));
         $('#card-count').html('총 카드 수 : '+data.count);
+        $('#card-score').html('족보 점수 : '+checkScore(res));
         res.set('G', sortCard(res.get('G')));
         res.set('Y', sortCard(res.get('Y')));
         res.set('T', sortCard(res.get('T')));
@@ -131,7 +208,7 @@ function rollCard() {
         let count = 1;
         let y = 170;
         for (let card of res.get('G')) {
-            if (count === 8) {
+            if (count === 6) {
                 x = 0;
                 y -= 90;
                 count = 1;
@@ -144,7 +221,7 @@ function rollCard() {
         count = 1;
         y = 170;
         for (let card of res.get('Y')) {
-            if (count === 8) {
+            if (count === 6) {
                 x = 0;
                 y -= 90;
                 count = 1;
@@ -157,7 +234,7 @@ function rollCard() {
         count = 1;
         y = 170;
         for (let card of res.get('T')) {
-            if (count === 8) {
+            if (count === 6) {
                 x = 0;
                 y -= 90;
                 count = 1;
@@ -170,7 +247,7 @@ function rollCard() {
         count = 1;
         y = 170;
         for (let card of res.get('P')) {
-            if (count === 8) {
+            if (count === 11) {
                 x = 0;
                 y -= 90;
                 count = 1;
