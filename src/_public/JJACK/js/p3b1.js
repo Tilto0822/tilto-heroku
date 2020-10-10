@@ -28,10 +28,10 @@ function getCardLink(card) {
     return `url(./images/hwatu/${card}.png)`;
 }
 
-function makeRandomHwatuArray(min, max) {
+function makeRandomHwatuArray(count) {
     let alreadyPick = [];
     let res = {
-        count: randomInt(min, max),
+        count: count,
         array: []
     };
     for (let i = 0; i < res.count; i++) {
@@ -195,7 +195,7 @@ function checkScore(cardlist) {
 
 function rollCard() {
     reset();
-    $.post(`./${project}/organize-cards`, makeRandomHwatuArray(0, 51))
+    $.post(`./${project}/organize-cards`, makeRandomHwatuArray(randomInt(0, 51)))
     .done(function (data) {
         let res = new Map(JSON.parse(data.sort));
         $('#card-count').html('총 카드 수 : '+data.count);

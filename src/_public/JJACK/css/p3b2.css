@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #3c9b3c;
+    color: #eee;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player {
+    position: relative;
+    padding: 2px 10px 3px 10px;
+    height: 520px;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.back-list {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    display: flex;
+    width: 100px;
+    height: 480px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.board {
+    height: 480px;
+    width: 100%;
+    flex: 1 1 100%;
+    display: flex;
+}
+
+#player-1 {
+    background-color: rgb(0, 200, 0);
+}
+
+#player-2 {
+    background-color: rgb(0, 0, 200);
+}
+
+.row-wrap {
+    margin-bottom: 10px;
+    height: 470px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.card-wrap {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 68px;
+    height: 105px;
+}
+
+.card {
+    position: absolute;
+    z-index: 1;
+    width: 68px;
+    height: 105px;
+}
+
+.card-container.low {
+    position: relative;
+    margin: 140px 10px 0 20px;
+    width: 460px;
+}
+
+.card-container.high {
+    position: relative;
+    margin: 200px 10px 0 10px;
+    width: 460px;
+}
+
+.card-shower {
+    display: none;
+    width: 102px;
+    height: 177px;
+}
+
+.card-shower .card-title {
+    width: 102px;
+    height: 20px;
+    text-align: center;
+    font-size: 12pt;
+    color: #eee;
+}
+
+.card-shower .in-card{
+    width: 102px;
+    height: 157px;
+    background-size: cover;
+}
+
+#sidebar {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 120px;
+    background-color: RGB(30, 30, 30);
+}
+
+#sidebar .top .title {
+    margin-top: 20px;
+    font-size: 20pt;
+}
+
+#sidebar .top #reroll {
+    margin-top: 10px;
+    font-size: 11pt;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #eee;
+    color: #111;
+    cursor: pointer;
+}
+
+#sidebar .top #reroll:hover {
+    background-color: #ccc;
+}
+
+#sidebar .top #card-count, #sidebar .top .card-score {
+    margin-top: 5px;
+    font-size: 11pt;
+}

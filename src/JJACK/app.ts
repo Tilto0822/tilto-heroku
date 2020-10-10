@@ -4,6 +4,7 @@ import {router as rp1} from './routes/project1';
 import {router as rp2b1} from './routes/project2b1';
 import {router as rp2b2} from './routes/project2b2';
 import {router as rp3b1} from './routes/project3b1';
+import {router as rp3b2} from './routes/project3b2';
 
 class JJACK {
     public router: express.Router
@@ -16,6 +17,7 @@ class JJACK {
         this.router.use('/project2b1', rp2b1);
         this.router.use('/project2b2', rp2b2);
         this.router.use('/project3b1', rp3b1);
+        this.router.use('/project3b2', rp3b2);
     }
 }
 
